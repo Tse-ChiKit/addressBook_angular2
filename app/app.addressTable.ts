@@ -6,6 +6,13 @@ import { Component, Input } from '@angular/core';
 })
 export class AddressTableComponent {
 
+    deleteItem(addressItem) {
+        let index = this.addressItems.indexOf(addressItem);
+        if (index >= 0) {
+            this.addressItems.splice(index, 1);
+        }
+    }
+
     addressItems = [
         {
             id: 1,

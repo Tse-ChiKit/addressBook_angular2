@@ -3,14 +3,12 @@
         <tr>
             <th>Firstname</th>
             <th>Lastname</th>
-            <th>Age</th>
+            <th>address</th>
         </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let addressItem of addressItems">
-        <td>{{addressItem.firstName}}</td>
-        <td>{{addressItem.lastName}}</td>
-        <td>{{addressItem.address}}</td>
-    </tr>
+     <tr *ngFor="let addressItem of addressItems" 
+     [myTr]="addressItem" 
+     (delete)="deleteItem($event)"></tr>
     </tbody>
 </table>
