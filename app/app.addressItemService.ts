@@ -5,6 +5,10 @@ export class AddressItemService {
         return this.addressItems;
     }
 
+    addItem(addressItem){
+        this.addressItems.push(addressItem);
+    }
+
     deleteItem(addressItem) {
         let index = this.addressItems.indexOf(addressItem);
         if (index >= 0) {

@@ -9,6 +9,6 @@
     <tbody>
      <tr *ngFor="let addressItem of addressItems" 
      [myTr]="addressItem" 
-     (delete)="deleteItem($event)"></tr>
+     (delete)="onAdressItemDelete($event)"></tr>
     </tbody>
 </table>
