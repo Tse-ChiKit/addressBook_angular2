@@ -17,9 +17,9 @@ export class AddressItemFormComponent implements OnInit{
 
   ngOnInit(){
       this.addressForm = this.formBuilder.group({
-          firstName:[''],
-          lastName:[''],
-          address:['']
+          firstName:['',[Validators.required, Validators.minLength(2)]],
+          lastName:['',[Validators.required, Validators.minLength(2)]],
+          address:['',Validators.required]
       })
   }
 
