@@ -9,7 +9,8 @@ import { AddressComponent } from './app.addressItems';
 import { AddressTableComponent } from './app.addressTable';
 import { AddressItemFormComponent} from './app.addressItemForm';
 import { KeysPipe} from './app.keys.pipe';
-import { AddressItemService } from './app.addressItemService'
+import { AddressItemService } from './app.addressItemService';
+import { routing } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AddressItemService } from './app.addressItemService'
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    routing
   ]
 })
 export class AppModule {}

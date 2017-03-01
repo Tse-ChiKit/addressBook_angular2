@@ -1,16 +1,17 @@
-<header>
-    <h2>Add A New Address</h2>
-</header>
-<form (ngSubmit)="onSubmit(addressForm.value)" [formGroup]="addressForm">
-    <div class="form-group" [ngClass]="{'has-error':addressForm.get('firstName').invalid && 
+<div class="row">
+    <div class="col-lg-12">
+        <header>
+            <h2>Add A New Address</h2>
+        </header>
+        <form (ngSubmit)="onSubmit(addressForm.value)" [formGroup]="addressForm">
+            <div class="form-group" [ngClass]="{'has-error':addressForm.get('firstName').invalid && 
     addressForm.get('firstName').touched} ">
-        <label for="firstNameInput">FirstName</label>
-        <input type="text" class="form-control" id="firstNameInput" placeholder="FirstName" formControlName="firstName">
+                <label for="firstNameInput">FirstName</label>
+                <input type="text" class="form-control" id="firstNameInput" placeholder="FirstName" formControlName="firstName">
     </div>
     <!--error-message-->
     <div class="isa_error" *ngIf="addressForm.get('firstName').invalid && addressForm.get('firstName').touched">
-        <i class="fa fa-times-circle"></i>
-        The firstName cannot be empty and must contain at least two letters
+        <i class="fa fa-times-circle"></i> The firstName cannot be empty and must contain at least two letters
     </div>
     <div class="form-group" [ngClass]="{'has-error':!addressForm.controls['lastName'].valid && addressForm.get('lastName').touched}">
         <label for="lastNameInput">LastName</label>
@@ -18,8 +19,7 @@
     </div>
     <!--error-message-->
     <div class="isa_error" *ngIf="addressForm.get('lastName').invalid && addressForm.get('lastName').touched">
-        <i class="fa fa-times-circle"></i>
-        The lastName cannot be empty and must contain at least two letters
+        <i class="fa fa-times-circle"></i> The lastName cannot be empty and must contain at least two letters
     </div>
     <div class="form-group" [ngClass]="{'has-error':!addressForm.controls['address'].valid && addressForm.get('address').touched}">
         <label for="addressInput">Address</label>
@@ -27,8 +27,11 @@
     </div>
     <!--error-message-->
     <div class="isa_error" *ngIf="addressForm.get('address').invalid && addressForm.get('address').touched">
-        <i class="fa fa-times-circle"></i>
-        The address cannot be empty
+        <i class="fa fa-times-circle"></i> The address cannot be empty
     </div>
-    <button type="submit" class="btn btn-default" [disabled]="addressForm.invalid">Submit</button>
-</form>
+    <button type="submit" class="btn btn-default"  [disabled]="addressForm.invalid">Submit</button>
+    </form>
+</div>
+</div>
+
+<!--[routerLink]="['/']"-->
