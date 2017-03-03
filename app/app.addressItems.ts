@@ -3,7 +3,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
 @Component({
   selector: '[myTr]',
   template: `<td *ngFor="let key of addressItem | keys">{{addressItem[key]}}</td>
-             <button (click)="onDelete()">Delete</button>`
+             <button class="btn btn-danger" (click)="onDelete()"><i class="fa fa-trash" aria-hidden="true"></i></button>`
              
 })
 
